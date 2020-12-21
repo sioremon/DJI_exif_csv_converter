@@ -13,6 +13,14 @@ Convert DJI exif information to csv that could put in GIS software like QGIS
 3. execute ```cd DJI_exif_csv_converter```
 4. execute ```chmod +x install.sh```
 5. execute ```./install.sh```
-6. Then, Enjoy!
 
-If you are still unable to use the command, try rebooting first. If you find any implementation problems, please post them here.
+## USAGE
+```
+cnvexif DJI0001.jpg
+```
+```
+cnvexif DJI* 
+```
+Since the command is just an alias to .bashrc, you can change the command wrapper by editing the .bashrc.  
+
+If you are still unable to execute, try reboot first. If you find any implementation problems, please post to issue.
