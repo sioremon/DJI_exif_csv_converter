@@ -3,8 +3,8 @@ declare -a data
 IFS=' '
 readonly Scale=5
 echo 'filename,date,time,latitude,longitude' > exif.csv
-ls *.jpg |
-while read filename; do
+
+for filename in "$@"; do
     data=($(exif ${filename}| grep -e インテル -e 緯度 -e Longitude -e 日時 | sed -e '/オリジナル/d' -e 's/ の EXIF タグ (インテル バイトオーダー)://g' -e 's/緯度/Latitude/g' -e 's/日時/date/g' -e 's/date                  //g' -e 's/Latitude                  //g' -e 's/Longitude           //g' -e 's/|/ /g'|xargs ))
     
     function modify_latitude(){
