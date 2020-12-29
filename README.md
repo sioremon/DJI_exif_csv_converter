@@ -6,6 +6,10 @@ Convert DJI EXIF information to CSV that could put in GIS software like QGIS. CS
 - bash
 ## Dependency
 - [exif](https://packages.ubuntu.com/groovy/exif)
+You can install with 
+```
+sudo apt install exif
+```
 
 ## Installation
 1. Open Terminal
